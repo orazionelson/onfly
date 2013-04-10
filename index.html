@@ -5,7 +5,7 @@
         <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-        <title>On fly
+        <title>Onfly
         </title>
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
         <link rel="stylesheet" href="css/onfly.css" />
@@ -18,7 +18,7 @@
 
 	<div data-theme="a" data-role="header">
                 <h3 id="onfly-head">
-                    On fly
+                    Onfly
                 </h3>
                 <div data-role="fieldcontain" id="onfly-search">
                     <fieldset data-role="controlgroup">
@@ -36,7 +36,7 @@
 		</div><!--/content-primary -->
 		<div data-theme="a" data-role="footer" data-position="fixed">
 			<h1>
-            made with On fly v.1 c. <a href="http://www.nelsonweb.it">Alfredo Cosco</a> 2013
+            made with Onfly v.1 c. <a href="http://www.nelsonweb.it">Alfredo Cosco</a> 2013
 			</h1>
         </div>
 	</div><!-- /content -->
@@ -50,7 +50,7 @@ $("#onfly-page").on("pageshow", function(e) {
 	$('#suggestions').width(sugWidth);
 	
     $("#onflysearch").on("input", function(e) {
-        var text = $(this).attr('value');
+        var text = $(this).attr('value').toLowerCase();
         if(text.length < 1) {
             sugList.html("");
             sugList.listview("refresh");

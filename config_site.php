@@ -1,3 +1,3 @@
 <?php
-	$projectname="On fly";
+	$projectname="Onfly";
 ?>
