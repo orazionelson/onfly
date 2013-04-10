@@ -26,7 +26,6 @@ Onfly is a fast and 'easy to use' info system for mobile.
 The code is HTML5 with jQueryMobile and some php, the database used is sqlite.
 
 Onfly is a light solution to share infos, messages and skills.
-See the example page for possible uses.
 
 Install
 1) unpack the zip (or tar.gz) to your localhost/
