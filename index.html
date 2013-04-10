@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Onfly by orazionelson</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/orazionelson/onfly">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/orazionelson/onfly/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/orazionelson/onfly/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Onfly</h1>
+          <p>On fly is a fast and easy to use info system for mobile</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/orazionelson">orazionelson</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h1>Onfly</h1>
+
+<p>author: Alfredo Cosco - <a href="mailto:orazio.nelson@gmail.com">orazio.nelson@gmail.com</a> - <a href="http://www.nelsonweb.it">www.nelsonweb.it</a></p>
+
+<p>Onfly is a fast and 'easy to use' info system for mobile.
+The code is HTML5 with jQueryMobile and some php, the database used is sqlite.</p>
+
+<p>Onfly is a light solution to share infos, messages and skills.
+See the example page for possible uses.</p>
+
+<p>Install
+1) unpack the zip (or tar.gz) to your localhost/</p>
+
+<p>2) go to localhost/onfly/admin/ and push DB button fill in your DB, the default password is 'people'.
+Just fill the table 'messages' and the table 'references'.</p>
+
+<pre><code>a) Be careful, tags cannot contain empty spaces, if you want to insert a tag with multiple words you have to divide them with underscores "_", ex: control_room, spanish_auditorium... 
+
+b) Pay attention to the field 'code' in 'references' table. 
+A reference should be a phone number or a link, each reference must have a unique 'code'. 
+In 'messages' table you have tho put the references 'code' to show the number or the link. 
+
+c) Do not edit 'tags' table. See point 3.
+
+d) Don't panic, the script is provided with a sample DB.
+</code></pre>
+
+<p>3) push the button "Taglist", then "Refresh Taglist" this will fill the 'tags' table with tags added in 'messages' table. Each time you add a message with new tags you have to rebuild the list.</p>
+
+<p>4) Go to localhost/onfly/ to see your app, change styles, header, footer, background as you like.</p>
+
+<p>5) Upload to your site without the admin/ folder.</p>
+
+<p>Notes
+DBMS: the DB interface is provided by a modified version of phpliteadmin (<a href="https://code.google.com/p/phpliteadmin/">https://code.google.com/p/phpliteadmin/</a>)</p>
+
+<p>Recommendations
+This is first release, the script is not sure. 
+See sqlite documentation to see how give the right permissions to your DB file.  </p>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
