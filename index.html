@@ -1,86 +1,66 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Onfly by orazionelson</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/respond.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
     <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
+    <title>Onfly by orazionelson</title>
   </head>
+
   <body>
-      <div id="header">
-        <nav>
-          <li class="fork"><a href="https://github.com/orazionelson/onfly">View On GitHub</a></li>
-          <li class="downloads"><a href="https://github.com/orazionelson/onfly/zipball/master">ZIP</a></li>
-          <li class="downloads"><a href="https://github.com/orazionelson/onfly/tarball/master">TAR</a></li>
-          <li class="title">DOWNLOADS</li>
-        </nav>
-      </div><!-- end header -->
-
-    <div class="wrapper">
-
-      <section>
-        <div id="title">
-          <h1>Onfly</h1>
-          <p>On fly is a fast and easy to use info system for mobile</p>
-          <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/orazionelson">orazionelson</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></span>
-        </div>
-
+    <header>
+      <div class="inner">
         <h1>Onfly</h1>
+        <h2>A fast and easy info system for mobile</h2>
+        <a href="https://github.com/orazionelson/onfly" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
 
-<p>author: Alfredo Cosco - <a href="mailto:orazio.nelson@gmail.com">orazio.nelson@gmail.com</a> - <a href="http://www.nelsonweb.it">www.nelsonweb.it</a></p>
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h2>Onfly version 1.0</h2>
 
-<p>Onfly is a fast and 'easy to use' info system for mobile.
-The code is HTML5 with jQueryMobile and some php, the database used is sqlite.</p>
+<blockquote>
+<p>is a light solution to share infos, messages, suggestions, skills or dictionaries; you can use it in your LAN or in Internet.</p>
+</blockquote>
 
-<p>Onfly is a light solution to share infos, messages and skills.
-See the example page for possible uses.</p>
+<ul>
+<li>A light interface provides small suggestions, phone numbers and links on your smartphone or tablet. </li>
+<li>An easy admin back-end (built on top of <a href="https://code.google.com/p/phpliteadmin/">https://code.google.com/p/phpliteadmin/</a>) helps to manage your messages.</li>
+</ul><p>The code is HTML5 with <a href="http://jquerymobile.com/">jQueryMobile</a> and <a href="http://php.net/">PHP</a>, the database used is <a href="http://www.sqlite.org/">SQlite</a>.</p>
 
-<p>Install
-1) unpack the zip (or tar.gz) to your localhost/</p>
+<p>Alfredo Cosco - <a href="mailto:orazio.nelson@gmail.com">orazio.nelson@gmail.com</a> - <a href="http://www.nelsonweb.it">www.nelsonweb.it</a></p>
 
-<p>2) go to localhost/onfly/admin/ and push DB button fill in your DB, the default password is 'people'.
-Just fill the table 'messages' and the table 'references'.</p>
+<p>Released under <a href="http://www.gnu.org/licenses/gpl-2.0.html">GPL v2</a></p>
+        </section>
 
-<pre><code>a) Be careful, tags cannot contain empty spaces, if you want to insert a tag with multiple words you have to divide them with underscores "_", ex: control_room, spanish_auditorium... 
+        <aside id="sidebar">
+          <a href="https://github.com/orazionelson/onfly/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/orazionelson/onfly/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
 
-b) Pay attention to the field 'code' in 'references' table. 
-A reference should be a phone number or a link, each reference must have a unique 'code'. 
-In 'messages' table you have tho put the references 'code' to show the number or the link. 
+          <p class="repo-owner"><a href="https://github.com/orazionelson/onfly"></a> is maintained by <a href="https://github.com/orazionelson">orazionelson</a>.</p>
 
-c) Do not edit 'tags' table. See point 3.
-
-d) Don't panic, the script is provided with a sample DB.
-</code></pre>
-
-<p>3) push the button "Taglist", then "Refresh Taglist" this will fill the 'tags' table with tags added in 'messages' table. Each time you add a message with new tags you have to rebuild the list.</p>
-
-<p>4) Go to localhost/onfly/ to see your app, change styles, header, footer, background as you like.</p>
-
-<p>5) Upload to your site without the admin/ folder.</p>
-
-<p>Notes
-DBMS: the DB interface is provided by a modified version of phpliteadmin (<a href="https://code.google.com/p/phpliteadmin/">https://code.google.com/p/phpliteadmin/</a>)</p>
-
-<p>Recommendations
-This is first release, the script is not sure. 
-See sqlite documentation to see how give the right permissions to your DB file.  </p>
-      </section>
-
+          <p>This page was generated by <a href="pages.github.com">GitHub Pages</a> using the Architect theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
     </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
+
+  
   </body>
 </html>
