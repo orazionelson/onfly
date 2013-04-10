@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <title>On fly
+        </title>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+        <link rel="stylesheet" href="css/onfly.css" />
+		<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+		<link rel="icon" type="image/png" href="img/favicon.png">        
+    </head>
+    <body>
+		<div data-role="page" id="onfly-page">
+
+	<div data-theme="a" data-role="header">
+                <h3 id="onfly-head">
+                    On fly
+                </h3>
+                <div data-role="fieldcontain" id="onfly-search">
+                    <fieldset data-role="controlgroup">
+                        <input name="search1" id="onflysearch" placeholder="search for..." value="" type="search" />
+                        <ul id="suggestions" data-role="listview" data-inset="true"></ul>
+                    </fieldset>
+                </div>
+            </div>
+	<!-- /header -->
+
+	<div data-role="content">
+
+		<div class="content-primary" id="messages">
+		<!--here will see the suggestions-->
+		</div><!--/content-primary -->
+		<div data-theme="a" data-role="footer" data-position="fixed">
+			<h1>
+            made with On fly v.1 c. <a href="http://www.nelsonweb.it">Alfredo Cosco</a> 2013
+			</h1>
+        </div>
+	</div><!-- /content -->
+</div><!-- /page -->
+<script>
+$("#onfly-page").on("pageshow", function(e) {
+    //console.log("Ready to bring the awesome.");
+    var sugList = $("#suggestions");
+	var sugWidth = $('#onflysearch').width();
+
+	$('#suggestions').width(sugWidth);
+	
+    $("#onflysearch").on("input", function(e) {
+        var text = $(this).attr('value');
+        if(text.length < 1) {
+            sugList.html("");
+            sugList.listview("refresh");
+        } else {
+            $.post("ajax2.php",{value:text}, function(res,code) {
+                var str = "";
+                for(var i=0, len=res.length; i<len; i++) {
+                    str += "<li><a href=\"#\" class=\"goto\" title=\""+res[i]+"\">"+res[i]+"</a></li>";
+                }
+                sugList.html(str);
+                sugList.listview("refresh");
+                //console.dir(res);
+                
+                $('.goto').click(function(){
+					$('#messages').empty();
+					$('#suggestions').empty();
+					
+					var tag=$(this).attr('title');
+					
+					$('#onflysearch').attr('value', tag);
+					//alert($(this).attr('title'));
+					
+					$.post('ajax3.php', { tag : tag }, function(searchq){$('#messages').append(searchq).trigger('create');});
+				});	
+                 
+            },"json");
+            
+        
+        }
+    }).focus(function(){$(this).val('');});
+});
+</script>
+
+    </body>
+</html>

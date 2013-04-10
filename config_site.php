@@ -1,0 +1,3 @@
+<?php
+	$projectname="On fly";
+?>

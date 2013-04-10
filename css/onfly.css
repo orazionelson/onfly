@@ -1,0 +1,26 @@
+/**
+ * On fly css v1
+ * Alfredo Cosco
+ * 
+ */ 
+
+#suggestions {
+	margin: 0;
+	margin-left:16px;
+	padding: 0;
+	position: absolute;
+	z-index: 100;
+}
+
+.ui-content {
+    padding: 5px;
+}
+
+.ui-collapsible-set {
+    margin: 0;
+}
+
+#onfly-page{
+	background: transparent url('../img/bglogo.png') no-repeat right 95%;
+	background-position:fixed;
+}
