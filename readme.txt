@@ -1,7 +1,7 @@
 
-Onfly (v1.0)
+Onfly (v1)
 author: Alfredo Cosco - orazio.nelson@gmail.com - www.nelsonweb.it
-version: 1.0
+version: 1
 Date: 04/11/2013
 Licence: GPL v2
 *********************************************************
@@ -25,7 +25,7 @@ MA  02110-1301, USA.
 Onfly is a fast and 'easy to use' info system for mobile.
 The code is HTML5 with jQueryMobile and some php, the database used is sqlite.
 
-Onfly is a light solution to share infos, messages and skills.
+Onfly is a lightweight solution to share infos, messages and skills.
 
 Install
 1) unpack the zip (or tar.gz) to your localhost/
