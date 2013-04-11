@@ -1,9 +1,4 @@
-<?
-/**
- * Auto Complete 5.1
- * April 13, 2010
- * Corey Hart @ http://www.codenothing.com
- */ 
+<? 
 include_once('config.php');
 
 $query = 'SELECT tag FROM tags;';
@@ -21,13 +16,14 @@ if (isset($_POST['value']))
     $value = trim($_POST['value']);
 } 
 
-if (isset($_GET['value'])) 
+/*if (isset($_GET['value'])) 
 { 
     $value = trim($_GET['value']);
-} 
+}*/ 
 
 // Ensure there is a value to search for
 //if (!isset($value) || $value == '') exit;
+//var_dump($tags);
 
 sort($tags);
 // Set up the send back array
