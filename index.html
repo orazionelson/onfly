@@ -17,13 +17,17 @@
 		<div data-role="page" id="onfly-page">
 
 	<div data-theme="a" data-role="header">
+		
                 <h3 id="onfly-head">
                     Onfly
                 </h3>
                 <div data-role="fieldcontain" id="onfly-search">
+                	
                     <fieldset data-role="controlgroup">
                         <input name="search1" id="onflysearch" placeholder="search for..." value="" type="search" />
+                        
                         <ul id="suggestions" data-role="listview" data-inset="true"></ul>
+                    
                     </fieldset>
                 </div>
             </div>
@@ -33,11 +37,14 @@
 
 		<div class="content-primary" id="messages">
 		<!--here will see the suggestions-->
+		<p class="firstmessage">Onfly is a light solution to share infos, messages, suggestions in a LAN or in Internet</p>
+		<p>Here some sample keywords to use in the search form: <span class="keywords"></span></p>
 		</div><!--/content-primary -->
 		<div data-theme="a" data-role="footer" data-position="fixed">
-			<h1>
+			<h3><a href="#" id="refresh" data-role="button" data-icon="refresh" data-inline="true" data-theme="b" data-mini="true" onclick="location.reload();">Refresh</a>
+			
             made with Onfly v.1 c. <a href="http://www.nelsonweb.it">Alfredo Cosco</a> 2013
-			</h1>
+			</h3>
         </div>
 	</div><!-- /content -->
 </div><!-- /page -->
@@ -81,6 +88,7 @@ $("#onfly-page").on("pageshow", function(e) {
         
         }
     }).focus(function(){$(this).val('');});
+   $('.keywords').load('ajax4.php'); 
 });
 </script>
 

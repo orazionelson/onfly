@@ -21,6 +21,16 @@
 }
 
 #onfly-page{
-	background: transparent url('../img/bglogo.png') no-repeat right 95%;
+	background: transparent url('../img/bglogo.png') no-repeat right 90%;
 	background-position:fixed;
+}
+
+.firstmessage{
+	font-size: 1.5em;
+	font-weight:bold;
+	color:#0088CC;
+}
+
+.keywords{
+	font-style:italic;
 }
