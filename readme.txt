@@ -5,7 +5,7 @@ version: 1
 Date: 04/11/2013
 Licence: GPL v2
 *********************************************************
-Copyright (C) yyyy  name of author
+On fly v1 Copyright (C) 2013  Alfredo Cosco
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
 as published by the Free Software Foundation; either version 2
@@ -30,7 +30,7 @@ Onfly is a lightweight solution to share infos, messages and skills.
 Install
 1) unpack the zip (or tar.gz) to your localhost/
 
-2) go to localhost/onfly/admin/ and push DB button fill in your DB, the default password is 'people'.
+2) go to localhost/onfly/admin/ and push DB button, fill in your DB, the default password is 'people'.
 Just fill the table 'messages' and the table 'references'.
 
 	a) Be careful, tags cannot contain empty spaces, if you want to insert a tag with multiple words you have to divide them with underscores "_", ex: control_room, spanish_auditorium... 

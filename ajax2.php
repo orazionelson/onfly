@@ -1,4 +1,10 @@
 <? 
+/**
+ * On fly v1
+ * Alfredo Cosco
+ * 
+ */ 
+ 
 include_once('config.php');
 
 $query = 'SELECT tag FROM tags;';
@@ -32,12 +38,6 @@ $found = array();
 // Search through each standard val and match it if possible
 foreach ($tags as $tag){
 	if (strpos($tag, $value) === 0){
-		// Return Array
-		//$found[] = array(
-			// By only passing back the value attribute,
-			// it will be defaulted as the display
-			//"value" => $tag,
-		//);
 		$found[]=$tag;
 		if (count($found) >= 10) break;
 	}

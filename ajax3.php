@@ -1,23 +1,11 @@
-<!--link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.css" /-->
 <?
+/**
+ * On fly v1
+ * Alfredo Cosco
+ * 
+ */ 
 include_once('config.php');
-
-function parseRef($value,$db)
-{
-	//$path = 'db/db.sqlite';
-	//$db = new SQLite3($path);
-	
-	//switch from 'code' to 'reference' (see references table)
-	$query="SELECT * FROM \"references\" WHERE \"code\" = '".$value."'";
-	$results = $db->query($query);
-	//var_dump($results);
-	while ($row = $results->fetchArray(SQLITE3_ASSOC)) {
-    $result=($row['reference']);
-	}
-	//autobuild link on the reference if it begins for http
-	$result=preg_replace('#(https?://[^\s]+)#', '<a href="$1">$1</a>', $result);
-	return $result;
-}
+include_once 'functions.php';
 
 if (isset($_POST['tag'])) {
 

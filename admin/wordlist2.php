@@ -1,4 +1,9 @@
 <?php
+/**
+ * On fly v1
+ * Alfredo Cosco
+ * 
+ */ 
 include_once('wordlist.inc.php');
 
 $query2="DELETE FROM tags";

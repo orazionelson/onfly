@@ -3,13 +3,9 @@
  * Alfredo Cosco
  * 
  */ 
-
-#suggestions {
-	margin: 0;
-	margin-left:16px;
-	padding: 0;
-	position: absolute;
-	z-index: 100;
+#onfly-page{
+	background: transparent url('../img/bglogo.png') no-repeat right 90%;
+	background-position:fixed;
 }
 
 .ui-content {
@@ -20,9 +16,12 @@
     margin: 0;
 }
 
-#onfly-page{
-	background: transparent url('../img/bglogo.png') no-repeat right 90%;
-	background-position:fixed;
+#suggestions {
+	margin: 0;
+	margin-left:16px;
+	padding: 0;
+	position: absolute;
+	z-index: 100;
 }
 
 .firstmessage{

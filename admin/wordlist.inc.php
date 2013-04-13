@@ -1,4 +1,9 @@
 <?php
+/**
+ * On fly v1
+ * Alfredo Cosco
+ * 
+ */ 
 include_once('config.php');
 
 $query = 'SELECT tag1,tag2,tag3,tag4 FROM messages;';

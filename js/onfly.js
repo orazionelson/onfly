@@ -1,4 +1,8 @@
-// Put your custom code here
+/*
+ * On fly v1
+ * Alfredo Cosco
+ * 
+ */ 
 $("#onfly-page").on("pageshow", function(e) {
     //console.log("Ready to bring the awesome.");
     var sugList = $("#suggestions");
